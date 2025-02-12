@@ -1,0 +1,26 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.navbar-container{
+    background-color: #161880 !important;
+    margin: 0 0 auto 0;
+    height: 150px;
+}
+
+.color-main{
+    color: #161880;
+}
+
+.nav
+{
+    background-color: #161880 !important;
+    margin: 0 0 auto 0;
+    height: 150px;
+}
+/* .user-profile{
+    width: 600px !important;
+        height: 500px !important;
+        position: relative;
+} */
+

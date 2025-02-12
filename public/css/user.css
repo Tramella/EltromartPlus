@@ -1,0 +1,326 @@
+.user-profile{
+    width: 600px !important;
+        height: 500px !important;
+        position: relative;
+}
+.user-details{
+    width: 500px;
+    height: 50px;
+    font-size: 14px;
+    color: #ada9a9;
+    font-family: "Figtree";
+}
+
+.btn-editprofile{
+    background-color: #161880 !important;
+    color: white !important;
+
+}
+
+.side-profile{
+    width: 25%;
+    background-color: white;
+    /* margin: 30px 0px; */
+}
+
+.main-profile{
+    width: 75%;
+    height: auto;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    padding-top: 3%;
+}
+.icon-userprofile{
+width: 30px;
+height: auto;
+object-fit:contain;
+}
+.item-sideprofile{
+    cursor: pointer;
+}
+
+.active-usr {
+    background-color: #f9f9f9; /* Màu nền khi mục được chọn */
+
+}
+
+
+.title-userprofile{
+    color: #2f31bf;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.img-profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.main-contentuser{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* padding: 10px 0px; */
+}
+.main-contenttable{
+    width: 100%;
+    height: 100vh;
+}
+
+.main-contentusr{
+    background-color: white;
+    width: 90%;
+    height: 100%;
+    /*height: 90%;
+    */border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main-contentu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 50px;
+
+}
+
+.img-profilesmall{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* object-fit: contain; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.text-username{
+    font-size: 20px;
+    font-weight: 500;
+    color: #161880;
+}
+
+.txt-emailuser{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.welcome-user{
+    font-size: 24px;
+    font-weight: 500;
+    color: #161880;
+}
+
+.time-usrprofile{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.input-usrprofile{
+    width: 100%;
+    height: 40px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.w-usrcontent {
+    width: 45%;
+    margin-top: 2%;
+}
+.w-address{
+    width: 98%;
+}
+.title-usrinput{
+    font-size: 16px;
+    font-weight: 400;
+    color: #565454;
+}
+.input-usrprofile::placeholder {
+    color: #A1A1A1; /* Placeholder text color */
+    font-weight: 300;
+    font-size: 16px; /* Placeholder text size (optional) */
+    padding: 0px 20px;
+}
+.input-usrprofile:focus::placeholder {
+    opacity: 0; /* Hide placeholder when the input is focused */
+}
+
+.input-usrprofile:focus {
+    padding: 0px 20px;
+    outline: none; /* Remove focus outline */
+    font-size: 16px;
+    color: #8c8585;
+}
+.btn-usrprofile{
+    width: 270px;
+    height: 45px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #161880;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/* Label styles */
+.label-gender {
+    color: #A1A1A1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styling for the radio buttons */
+.input-gender[type="radio"] {
+    margin-right: 8px; /* Spacing between radio button and text */
+    appearance: none; /* Remove default radio button appearance */
+    width: 16px; /* Custom size */
+    height: 16px; /* Custom size */
+    border-radius: 50%; /* Make it round */
+    border: 2px solid #A1A1A1; /* Default border color */
+    background-color: white; /* Default background */
+    transition: all 0.3s ease; /* Smooth transition for visual changes */
+}
+
+/* Styling when the radio button is checked */
+.input-gender[type="radio"]:checked {
+    border-color: #161880; /* Border color when checked */
+    background-color: #161880; /* Background color when checked */
+}
+
+/* Change the label color when the radio button is checked */
+.input-gender[type="radio"]:checked~.label-gender {
+    color: #161880 !important; /* Change the label color */
+}
+
+/* Remove default outline when radio button is focused */
+.input-gender[type="radio"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #161880; /* Change border color when focused */
+}
+
+/* Optional: Hover effect for radio button */
+.input-gender[type="radio"]:hover {
+    border-color: #161880; /* Change border color when hovered */
+}
+.address-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 30px 0px;
+}
+
+.add-new-address{
+    display: flex;
+    width: 190px;
+    height: 45px;
+    background-color: #161880;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.thead-address{
+    background-color: #eaeaea;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 10px;
+    height: 40px;
+}
+.tbody-address{
+    border: 1px solid #eaeaea;
+    font-size: 12px;
+    font-weight: 500;
+    /* color: ; */
+    padding: 5px 10px;
+    height: 42px;
+    text-align: center;
+    /* height: 100%; */
+    /* display: flex;
+    align-items: center; */
+}
+
+.btn-address-edit{
+    width: 50px;
+    height: 19px;
+    background-color: #0A6CDC;
+    color: white;
+}
+
+.btn-address-delete{
+    width: 50px;
+    height: 19px;
+    background-color: #DA231E;
+    color: white;
+    margin-left: 5px;
+}
+
+.btn-address-statusd{
+    text-align: center;
+    width: 48px;
+    height: 9px;
+    background-color: #0FB27E;
+    color: white;
+    font-size: 8px;
+    font-weight: 500;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.btn-address-statusn{
+    text-align: center;
+    width: 48px;
+    height: 9px;
+    background-color: #B4B4B4;
+    color: white;
+    font-size: 8px;
+    font-weight: 500;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.icon-add-new{
+    width: 15px;
+    height: 15px;
+}
+
+.txt-add-address{
+    color:white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
