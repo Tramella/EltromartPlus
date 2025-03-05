@@ -103,186 +103,39 @@
     {{-- Flash Sale --}}
     <div class="w-full px-14 mb-5">
 
-        <div class="flex-col justify-start items-start">
-            <div class="title-sales text-lg">FLASH SALES</div>
-            <div class="flex justify-center items-center flex-wrap">
+        <div class=" flex-col justify-start items-start">
+            <div class="title-sales font">FLASH SALES</div>
+            <div class="flex justify-center items-center">
                 <ul id="autoplay" class="cs-hidden">
                     {{-- 1. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
+                    @foreach ($saleProducts as $s)
+                        <li class="item-a">
+                            <div class="mt-5 me-3">
 
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
+                                <div class="flex flex-col justify-center items-center item-product">
+                                    <div class="overplay flex flex-col justify-center items-center">
+                                        <a href="{{ route('product.detail', ['id' => $s->id]) }}" class="btn-buy2">View
+                                            Details</a>
+
+                                        <a href="#" class="btn-buy1 mt-2">Add to Cart</a>
+                                    </div>
+                                    <img src="{{ asset('images/productimg_rbg/' . $s->product_img) }}" alt="sp1"
+                                        class="img-product" />
+                                    <div class="text-start font-medium mt-5">
+                                        <p class="text-start name-product">{{ $s->product_name }}</p>
+                                        <p class="mt-3 text-sm">
+                                            <span class="regular-price">
+                                                <s class="reg_price font-normal">${{ $s->regular_price }}</s> to
+                                            </span>
+                                            <strong class="text-price">${{ $s->sale_price }}</strong>
+                                        </p>
+                                    </div>
+
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    {{-- 2. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
+                        </li>
+                    @endforeach
 
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price"><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 3. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 4. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 5. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 6. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 7. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    {{-- 8. --}}
-                    <li class="item-a">
-                        <div class="mt-5 me-3">
-
-                            <div class="flex flex-col justify-center items-center item-product">
-                                <div class="overplay">
-                                    <a href="#" class="btn-buy">Buy Now</a>
-                                </div>
-                                <img src="{{ asset('images/sp1.jpg') }}" alt="sp1" class="img-product" />
-                                <div class="text-start font-medium mt-5">
-                                    <p class="text-start name-product">Computer Mac and Assoccities</p>
-                                    <p class="mt-3 text-sm"><span class="regular-price""><s
-                                                class="reg_price font-normal">$199.99</s> to </span><strong
-                                            class="text-price">$179.99</strong></p>
-                                </div>
-                                <div class="flex justify-between items-center mt-5 mb-2">
-                                    <button class="btn-choose">Choose Options</button>
-                                    <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                                </div>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
 
             </div>
@@ -292,54 +145,24 @@
     {{-- Top Categories --}}
     <div class="flex flex-col mt-12 mb-10">
         <div class="text-center">
-            <h2 class="title-sales text-lg">TOP CATEGORIES</h2>
+            <h2 class="title-sales font">TOP CATEGORIES</h2>
         </div>
         <div class="flex justify-end items-end pe-10 mt-3 mb-2">
             <u class="text-base font-light">More </u><img src="{{ asset('images/Right.png') }}" alt="more"
                 class="moreicon ms-1" />
         </div>
         <div class="flex justify-center items-center flex-wrap">
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/headphones.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Accessories</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/laptop.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Laptops</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/mobile.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Mobile phones</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/tablet.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Tablets</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/pc.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">PCs</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/headphones.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Accessories</p>
-            </div>
+            @foreach ($categories as $category)
+                <a href="{{ route('product.' . $category->slug) }}"
+                    class="w-cate item-cate flex flex-col justify-center items-center me-5 mb-5 mt-3">
+                    <img src="{{ asset('images/' . $category->cate_img) }}" alt="cate1" class="img-cate" />
 
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/laptop.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Laptops</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/mobile.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Mobile phones</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/tablet.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">Tablets</p>
-            </div>
-            <div class="col-2.4 item-cate flex flex-col justify-center items-center me-5 mb-5">
-                <img src="{{ asset('images/pc.jpg') }}" alt="cate1" class="img-cate" />
-                <p class="text-xs font-medium  name-product">PCs</p>
-            </div>
+
+                    <p class="text-xs font-medium  name-product mt-2">{{ $category->cate_name }}</p>
+                </a>
+            @endforeach
+
+
         </div>
     </div>
 
@@ -352,68 +175,34 @@
                     class="moreicon ms-1" />
             </div>
             <div class="flex flex-wrap justify-between items-center px-10">
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
+                @foreach ($newProduct as $n)
+                    <div class=" me-3">
+                        <div class="flex flex-col justify-center items-center item-newproduct">
+                            <img src="{{ asset('images/productimg_rbg/' . $n->product_img) }}" alt="sp1"
+                                class="img-newproduct" />
+                            <div class="text-start font-medium mt-5">
+                                <p class="text-start  name-product">{{ $n->product_name }}</p>
+                                <p class="mt-3 text-sm text-center"><span class="regular-price">
+                                        @if ($n->sale_price == null)
+                                            <strong class="text-price">${{ $n->regular_price }}</strong>
+                                        @else
+                                            <s class="reg_price font-normal">${{ $n->regular_price }}</s> to
+                                    </span><strong class="text-price">${{ $n->sale_price }}</strong>
+                @endif
+                </p>
+
+            </div>
+            <div class="flex justify-between items-center mt-5 mb-2">
+                <button class="btn-choose-product">Choose Options</button>
+                <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
             </div>
         </div>
+    </div>
+    @endforeach
+
+
+    </div>
+    </div>
 
     </div>
 
@@ -451,66 +240,26 @@
                     class="moreicon ms-1" />
             </div>
             <div class="flex flex-wrap justify-between items-center px-10">
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/mobiles.jpg') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/mobile.jpg') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
+                @foreach ($topMobile as $t)
+                    <div class="me-3">
+                        <div class="flex flex-col justify-center items-center item-newproduct">
+                            <img src="{{ asset('images/productimg_rbg/' . $t->product_img) }}" alt="sp1"
+                                class="img-newproduct" />
+                            <div class="text-start font-medium mt-5">
+                                <p class="text-start  name-product">{{ $t->product_name }}</p>
+                                <p class="mt-3 text-sm"><span class="regular-price""><s
+                                            class="reg_price font-normal">${{ $t->regular_price }}</s> to </span><strong
+                                        class="text-price">${{ $t->sale_price }}</strong></p>
+                            </div>
+                            <div class="flex justify-between items-center mt-5 mb-2">
+                                <button class="btn-choose-product">Choose Options</button>
+                                <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/mobiles.jpg') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/mobile.jpg') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
+
             </div>
         </div>
 
@@ -525,66 +274,26 @@
                     class="moreicon ms-1" />
             </div>
             <div class="flex flex-wrap justify-between items-center px-10">
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
+                @foreach ($topLaptop as $l)
+                    <div class="me-3">
+                        <div class="flex flex-col justify-center items-center item-newproduct">
+                            <img src="{{ asset('images/productimg_rbg/' . $l->product_img) }}" alt="sp1"
+                                class="img-newproduct" />
+                            <div class="text-start font-medium mt-5">
+                                <p class="text-start  name-product">{{ $l->product_name }}</p>
+                                <p class="mt-3 text-sm"><span class="regular-price""><s
+                                            class="reg_price font-normal">${{ $l->regular_price }}</s> to </span><strong
+                                        class="text-price">${{ $l->sale_price }}</strong></p>
+                            </div>
+                            <div class="flex justify-between items-center mt-5 mb-2">
+                                <button class="btn-choose-product">Choose Options</button>
+                                <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
-                <div class="me-3">
-                    <div class="flex flex-col justify-center items-center item-newproduct">
-                        <img src="{{ asset('images/laptop1.png') }}" alt="sp1" class="img-newproduct" />
-                        <div class="text-start font-medium mt-5">
-                            <p class="text-start  name-product">Computer Mac and Assoccities</p>
-                            <p class="mt-3 text-sm"><span class="regular-price""><s
-                                        class="reg_price font-normal">$199.99</s> to </span><strong
-                                    class="text-price">$179.99</strong></p>
-                        </div>
-                        <div class="flex justify-between items-center mt-5 mb-2">
-                            <button class="btn-choose-product">Choose Options</button>
-                            <img src="{{ asset('images/Favorite.png') }}" alt="addwish" class="iconheart" />
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+
+
             </div>
         </div>
 
@@ -660,25 +369,21 @@
     </div>
     {{-- TOP BRANDS --}}
     <div class="w-full flex flex-col mt-10 mb-10 justify-center">
-        <div class="text-center">
+        <div class="text-center mt-5">
             <h2 class="font-bold text-lg">TOP BRANDS</h2>
         </div>
-        <div class="flex justify-end items-end pe-10 mt-3 mb-2">
+        <div class="flex justify-end items-end pe-10 mt-1 mb-2">
             <u class="text-base font-light">More </u><img src="{{ asset('images/Right.png') }}" alt="more"
                 class="moreicon ms-1" />
         </div>
         <div class="w-11/12 flex justify-between items-center ps-10">
-            <img src="{{ asset('images/asus_logo.png') }}" alt="logobrand1" class="logo_brand
-            " />
-            <img src="{{ asset('images/dell_logo.jpg') }}" alt="logobrand2" class="logo_brand
-            " />
-            <img src="{{ asset('images/msi_logo.jpg') }}" alt="logobrand3" class="logo_brand
-            " />
-            <img src="{{ asset('images/asus_logo.png') }}" alt="logobrand4" class="logo_brand
-            " />
-            <img src="{{ asset('images/asus_logo.png') }}"
-                alt="logobrand5"class="logo_brand
-                                                                                                                                                                                                                                        " />
+            @foreach ($brands as $brand)
+                <div class="w-cate item-cate flex flex-col justify-center items-center me-5 mb-5 mt-1">
+                    <img src="{{ asset('images/' . $brand->brand_img) }}" alt="logobrand1" class="logo_brand" />
+                </div>
+            @endforeach
+
+
         </div>
     </div>
     {{-- SCRIPTS --}}
