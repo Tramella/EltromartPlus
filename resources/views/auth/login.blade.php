@@ -20,7 +20,7 @@
             <!-- Password -->
             <div class="mt-3">
                 <div class="Label"><label>Password</label><span class="force"> *</span></div>
-                <input id="password" class="px-5 block mt-2 input-form" type="text" name="password"
+                <input type="password" id="password" class="px-5 block mt-2 input-form" type="text" name="password"
                     :value="old('password')" required autocomplete="password" />
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
